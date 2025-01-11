@@ -1,49 +1,177 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #0a192f; /* Dark blue background */
+    color: #ccd6f6; /* Light text color */
     line-height: 1.6;
-    color: #333;
-}
-
-header {
-    background: #0078D7;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header h1 {
     margin: 0;
-    font-size: 2.5em;
-}
-
-nav ul {
-    list-style: none;
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+/* Header Styling */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #112240; /* Slightly lighter dark */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-nav ul li a {
-    color: #fff;
+.main-header h1 {
+    font-size: 1.8rem;
+    color: #64ffda;
+}
+
+.main-header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-header nav ul li {
+    margin: 0 15px;
+}
+
+.main-header nav ul li a {
+    color: #ccd6f6;
+    font-size: 1.1rem;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
+.main-header nav ul li a:hover {
+    color: #64ffda;
+}
+
+/* Main Content */
+main {
+    padding-top: 100px; /* To avoid content being hidden under the fixed header */
+}
+
+/* Section Styling */
 section {
-    padding: 20px;
-    margin: 10px auto;
-    max-width: 800px;
-    background: #f4f4f4;
-    border-radius: 5px;
+    padding: 60px 40px; /* Reduce general padding within sections */
+    max-width: 900px;
+    margin: 0 auto; /* Center sections */
 }
 
+/* Headings Inside Sections */
+section h2 {
+    font-size: 2.5rem;
+    color: #64ffda;
+    margin-top: 20px; /* Reduce space above headings */
+    margin-bottom: 15px; /* Space below headings */
+}
+
+/* Paragraphs Inside Sections */
+section p {
+    margin-bottom: 20px; /* Consistent spacing between paragraphs */
+    font-size: 1rem;
+    color: #8892b0;
+    line-height: 1.8;
+}
+
+/* Lists Inside Sections */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Specific Adjustment Between Sections */
+section + section {
+    margin-top: 40px; /* Reduce gap between adjacent sections */
+}
+
+section:last-of-type {
+    padding-bottom: 40px; /* Reduce padding at the bottom of the last section */
+}
+
+/* Footer Styling */
 footer {
     text-align: center;
-    padding: 10px;
-    background: #333;
-    color: #fff;
+    padding: 20px;
+    background: #112240;
+    color: #8892b0;
+    margin-top: 20px;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #64ffda;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 0 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 15px 20px;
+    }
+
+    .main-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .main-header nav ul li {
+        margin: 0 10px;
+    }
+
+    main {
+        padding-top: 80px;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+/* Experience Section */
+.job {
+    margin-bottom: 40px;
+}
+
+.job h3 {
+    font-size: 1.8rem;
+    color: #64ffda;
+    margin-bottom: 10px;
+}
+
+.job p {
+    font-size: 1rem;
+    color: #8892b0;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.job p strong {
+    color: #ccd6f6;
+    font-weight: bold;
 }
